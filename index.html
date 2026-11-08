@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pabellón de Exposición · AR</title>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+<style>
+  html, body { margin: 0; height: 100%; background: #f2f1ee; font-family: system-ui, sans-serif; color: #1a1a1a; }
+  header { padding: 14px 16px 8px; }
+  h1 { font-size: 18px; margin: 0; }
+  p { font-size: 13px; margin: 4px 0 0; color: #555; }
+  model-viewer { width: 100%; height: calc(100% - 80px); background: #f2f1ee; }
+  #ar { position: absolute; left: 50%; bottom: 24px; transform: translateX(-50%);
+        background: #c8382a; color: #fff; border: 0; border-radius: 999px;
+        padding: 14px 26px; font-size: 16px; font-weight: 600; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Pabellón de Exposición Temporal</h1>
+  <p>Explanada de Rectoría, CU UANL · Escala 1:1 · FARQ</p>
+</header>
+<model-viewer src="pabellon.glb" alt="Pabellón de exposición temporal"
+  ar ar-modes="webxr scene-viewer quick-look" ar-scale="fixed" ar-placement="floor"
+  camera-controls touch-action="pan-y" shadow-intensity="1" exposure="1"
+  camera-orbit="-35deg 70deg 28m">
+  <button slot="ar-button" id="ar">Ver en realidad aumentada</button>
+</model-viewer>
+</body>
+</html>
